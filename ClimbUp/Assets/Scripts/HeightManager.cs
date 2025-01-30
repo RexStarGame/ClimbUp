@@ -9,6 +9,8 @@ public class HeightManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI heightText;
 
+    [SerializeField] private Transform player;
+
     private float height;
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,11 @@ public class HeightManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         height = (startPoint.transform.position - transform.position).magnitude;
 
         heightText.text = "Height: " + height.ToString("F1") + " meters";
+        
     }
 }
