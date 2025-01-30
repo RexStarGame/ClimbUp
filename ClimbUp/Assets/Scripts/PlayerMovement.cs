@@ -10,6 +10,9 @@ public class NewBehaviourScript : MonoBehaviour
     public float fallSpeed;
     public float fallSpeedMultiplier;
 
+    float inputHorizontal;
+    float inputVertical;
+
     private float Move;
 
     public Rigidbody2D rb;
@@ -33,6 +36,20 @@ public class NewBehaviourScript : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
         Gravity();
+
+        flip();
+    }
+
+    private void flip()
+    {
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+        
+        if (inputHorizontal != 0f)
+        {
+            Vector3 currentScale = gameObject.transform.localScale;
+            gameObject.transform.localScale = new Vector3(-Mathf.Sign(inputHorizontal) * Mathf.Abs(currentScale.x), currentScale.y, currentScale.z);
+        }
+
     }
 
     private void Gravity()
