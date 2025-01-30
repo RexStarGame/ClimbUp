@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class LavaController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f; 
+    [SerializeField] private float moveSpeed = 1.5f;
+    [SerializeField] private float MaxMoveSpeed = 2.0f;
     [SerializeField] private float startDelay = 10f; 
     private Rigidbody2D rb2D;
-    private bool isRising = false; 
+    private bool isRising = false;
 
+    [SerializeField] private Transform playerPos; 
+    [SerializeField] private bool isPlayerClose = false;
+    [SerializeField] private float distance = 10f; 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         StartCoroutine(StartLavaRise()); 
-    }
+    } 
 
     private IEnumerator StartLavaRise()
     {
@@ -25,11 +29,20 @@ public class LavaController : MonoBehaviour
     {
         if (isRising)
         {
-            rb2D.velocity = new Vector2(0f, moveSpeed); 
+            float yDifference = playerPos.position.y - rb2D.position.y;
+
+            if (Mathf.Abs(yDifference) > distance)
+            {
+                rb2D.velocity = new Vector2(0f, Mathf.Sign(yDifference) * MaxMoveSpeed);
+            }
+            else
+            {
+                rb2D.velocity = new Vector2(0f, Mathf.Sign(yDifference) * moveSpeed);
+            }
         }
         else
         {
-            rb2D.velocity = Vector2.zero; 
+            rb2D.velocity = Vector2.zero;
         }
     }
 
