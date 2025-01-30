@@ -10,7 +10,12 @@ public class LevelGenerator : MonoBehaviour
     private List<Vector2> floorsList = new();
     private void flip(GameObject go, Transform tra)
     {
-        go.transform.rotation = new Quaternion(go.transform.rotation.x, tra.rotation.y + 180, go.transform.rotation.z, go.transform.rotation.w);
+        float tempRot = 0f;
+        if (Mathf.Approximately(tra.rotation.y, 0f))
+        {
+            tempRot = 180;
+        }
+        go.transform.rotation = new Quaternion(go.transform.rotation.x, tempRot, go.transform.rotation.z, go.transform.rotation.w);
     }
 
     internal void SpawnNewLevel(Transform tra)
