@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public GameObject floors;
+    public GameObject[] floors;
     private List<Vector2> floorsList = new();
     private void flip(GameObject go, Transform tra)
     {
@@ -17,19 +18,25 @@ public class LevelGenerator : MonoBehaviour
         }
         go.transform.rotation = new Quaternion(go.transform.rotation.x, tempRot, go.transform.rotation.z, go.transform.rotation.w);
     }
-
     internal void SpawnNewLevel(Transform tra)
     {
         if(floorsList.Contains(tra.position))
         {
             return;
         }
-        GameObject go = Instantiate(floors, new Vector2(0, tra.position.y + 10.06f), Quaternion.identity);
+
+    
+        GameObject go = Instantiate(GetNewFloor(), new Vector2(0, tra.position.y + 10.06f), Quaternion.identity);
         if(go.TryGetComponent(out LevelController levelController))
         {
             levelController.levelGenerator = this;
         }
         floorsList.Add(tra.transform.position);
         flip(go, tra);
+    }
+
+    private GameObject GetNewFloor()
+    {
+        return floors[Random.Range(0,floors.Length)];
     }
 }

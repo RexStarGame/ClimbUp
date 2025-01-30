@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8209905879236068268}
   - component: {fileID: 572405163231340268}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Floor
+  m_Name: PF_Floor1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_Name
       value: Square (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -226,6 +230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.22
@@ -273,6 +281,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8169714586041914485}
+    - targetCorrespondingSourceObject: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5991143522719983556}
   m_SourcePrefab: {fileID: 100100000, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
 --- !u!4 &1176631358037819573 stripped
 Transform:
@@ -329,6 +340,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!61 &5991143522719983556
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423043037483095030}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1980245922087851827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -340,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_Name
       value: Square (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -456,6 +516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -570,6 +634,10 @@ PrefabInstance:
     - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_Name
       value: Square (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -686,6 +754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.22
@@ -801,6 +873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2708486
@@ -915,6 +991,10 @@ PrefabInstance:
     - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_Name
       value: Square (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 329751806302746022, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 538200373972444901, guid: fb31cf6c3d5a5da4fa39b07e33626da2, type: 3}
       propertyPath: m_LocalPosition.x

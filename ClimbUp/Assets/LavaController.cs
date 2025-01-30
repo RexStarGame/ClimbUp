@@ -27,11 +27,11 @@ public class LavaController : MonoBehaviour
 
     private void Update()
     {
-        if (isRising)
+        if (isRising && playerPos != null)
         {
             float yDifference = playerPos.position.y - rb2D.position.y;
 
-            if (Mathf.Abs(yDifference) > distance)
+            if (Mathf.Abs(yDifference) >= distance)
             {
                 rb2D.velocity = new Vector2(0f, Mathf.Sign(yDifference) * MaxMoveSpeed);
             }
