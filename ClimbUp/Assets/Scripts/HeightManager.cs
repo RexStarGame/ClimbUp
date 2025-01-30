@@ -21,9 +21,9 @@ public class HeightManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        height = (startPoint.transform.position - transform.position).magnitude;
+
+        height = player.position.y - startPoint.position.y ;
 
         heightText.text = "Height: " + height.ToString("F1") + " meters";
         
